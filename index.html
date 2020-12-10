@@ -1,464 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='fStore'>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flatlanders store Tunned</title>
     <link rel="icon" type="image/png" href="./images/bck/p-diamond.png">
+
+<!--Angular JS Libaries-->    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.26/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.28/stateEvents.js"></script>
+<!--Angular JS Libraries finish-->
     <link rel="stylesheet" type="text/css"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="./CSS/material-kit.css">
 </head>
 
 <body>
-<!--Navbar -->
-    <nav class="navbar  navbar-color-on-scroll fixed-top navbar-expand-lg" id="sectionNav" color-on-scroll="100">
-        <div class="container">
-            <div class="navbar-translate">
-                <a href="#" class="navbar-brand"><span><img style="width: 5%; " src="./images/bck/p-diamond.png"
-                            alt=""></span>
-                    Flatlanders Store</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="" class="nav-link">Lista de productos</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Mis compras</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Favoritos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="wrapper">
+        <navbar></navbar>
+        <div ui-view>
 
-<!--Header-->
-    <div class="page-header" data-parallax="true" style="background-image: url(./images/bck/mb-bg-fb-03.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1 class="title">Encuentre las mejores gemas</h1>
-                    <h4>En Flatlanders Store tenemos aquella joya que necesitas apra crear energia o darle a tu querida
-                    </h4>
-                    <br>
-                    <a href="https://www.youtube.com/watch?v=7Hk5A_TrLKg" target="_blank"
-                        class="btn btn-rose brtn-raised btn-lg">
-                        <i class="fa fa-play"> MIRA NUESTRO VIDEO</i>
-                    </a>
-                </div>
-            </div>
         </div>
+        <footerb></footerb>
     </div>
+    
 
-<!--Carrousel-->
-    <div class="row">
-        <div class="col">
-            <div class="card card-raised card-carrousel">
-                <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel" data-slide-to="0"></li>
-                        <li data-target="#carousel" data-slide-to="1" class="active"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active carousel-item-left">
-                            <img src="./images/bck/banner1.png" alt="First slide" class="d-block w100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4><i class="material-icons">loyalty</i>Promoción 1</h4>
-                            </div>
-                        </div>
+<!--Angular JS fStore Dependencies-->
+    <script src="./JS/app.js"></script>
+    <script src="./JS/controllers/landingController.js"></script>
+    <script src="./JS/controllers/appController.js"></script>
+    <script src="./JS/controllers/productsController.js"></script>
 
-                        <div class="carousel-item carousel-item-next carousel-item-left">
-                            <img src="./images/bck/banner2.png" alt="First slide" class="d-block w100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h4><i class="material-icons">loyalty</i>Promoción 2</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                        <i class="material-icons">keyboard_arrow_left</i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                        <i class="material-icons">keyboard_arrow_right</i>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--Sugerencias de compras-->
-    <div class="container">
-        <div class="section">
-            <div class="row text-left">
-               <h3 class="description">Relacionado con tus gustos
-                <small><a href="#">Ver historial</a></h3></small>   
-            </div>
-            <div class="col mr-auto ml-auto">
-                <div class="card card-plain card-carousel">
-                    <div id="u_likes" class="carousel slide text-center justify-content-center" data-ride="carousel" data-interval="5000">
-                        <ol class="carousel-indicators">
-                            <li data-target="#u_likes" data-slide-to="0"></li>
-                            <li data-target="#u_likes" data-slide-to="1" class="active"></li>
-                        </ol>
-                        <div class="carousel-inner">
-
-    <!--Primeros 4 items-->
-                            <div class="carousel-item active carousel-item-left">
-                               <div class="row">
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-01.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-02.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-03.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-04.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div> 
-                            </div>
-
-    <!--Segundos 4 items-->
-                            <div class="carousel-item carousel-item-next carousel-item-left">
-                               <div class="row">
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-05.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-06.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-07.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="col-md-3">
-                                       <div class="card card-rised">
-                                           <img class="justify-content-center" src="./images/gems/gem-08.gif" style="width: 70%;">
-                                           <div class="card-body">
-                                               <h3 class="card-subtitule mb-2 text-muted">Gema</h3>
-                                               <h4><i class="material-icons icon icon-success">attach_money</i> 1800</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
-
-    <!--Botones siguiente y anterior-->
-                        <a class="carousel-control-prev" href="#u_likes" role="button" data-slide="prev">
-                            <i class="material-icons">keyboard_arrow_left</i>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#u_likes" role="button" data-slide="next">
-                            <i class="material-icons">keyboard_arrow_right</i>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--Nuestros productos-->
-    <div class="main main-raised">
-        <div class="container">
-            <div class="section text-center">
-                <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto">
-                        <h2 class="title">Hablemos de nuestro producto</h2>
-                        <h5 class="description">Somos una familia que se dedica a ir a la mina a sacar las mejores gemas
-                            del mercado,
-                            con el fin de que tu tengas el mejor producto y la mejor calidad para regalar.
-                        </h5>
-                    </div>
-                </div>
-                <div class="features">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-rose">
-                                    <i class="material-icons">chat</i>
-                                </div>
-                                <h1 class="info-title">Platica con nosotros</h1>
-                                <p>Si tienes alguna duda sobre nuestros productos o algún problema con tu entrega o
-                                    producto ya entregado
-                                    platica con nosotros en nuestro chato para darte el mejor servicio al cliente que
-                                    haya existido
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-primary">
-                                    <i class="material-icons">verified_user</i>
-                                </div>
-                                <h1 class="info-title">Compras Verificadas</h1>
-                                <p>Tenemos la mejor entrega del mercado, contamos con ususarios que nos han dado los
-                                    mejores comentarios de los productos,
-                                    animate a comprar tu gema.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-rose">
-                                    <i class="material-icons">weekend</i>
-                                </div>
-                                <h1 class="info-title">Entregas Comprobadas</h1>
-                                <p>Estamos seguros de que cuando pidas tu producto llegará en las mejores condiciones,
-                                    de la mejor manera hasta tu sillón favorito.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br>
-<!--Filters-->
-    <div class="container-fluid text-left">
-        <h4 class="col-md-11 ml-auto description">Descubre</h4>
-        <div class="row">
-            <div class="col-md-5 ml-auto mr-2 card card-rised">
-                <div class="card-body">
-                    <h6 class="card-title text-muted">Cristales</h6>
-                    <div class="row">
-                    <div class="col-md-8">
-                        <h4 class="card-description">Porque no solo existen gemas preciosas, mira estos cristales para ti</h4>
-                        <button class="btn btn-sm btn-outline-primary">Ver más</button>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="./images/filters/crystals.png" style="width: 140%;">
-                    </div>
-                </div>
-                </div>
-                
-            </div>
-            <div class="col-md-5 ml-2 mr-auto card card-rised">
-                <div class="card-body">
-                    <h6 class="card-title text-muted">Joyero</h6>
-                    <div class="row">
-                    <div class="col-md-8">
-                        <h4 class="card-description">Si no encuentras lo que buscas, que tal si asistes con nuestro joyero para orientar tu compra</h4>
-                        <button class="btn btn-sm btn-outline-primary">Ver más</button>
-                    </div>
-                    <div class="col-md-4">
-                        <img src="./images/filters/joyero.jpg" alt="" style="width: 100%;"
-                        class="rounded-circle">
-                    </div>
-                </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-<!--Team-->
-    <div class="section text-center">
-        <h2 class="title">Este es nuestro equipo</h2>
-        <div class="team">
-            <div class="row">
-
-    <!--Father-->
-                <div class="col-md-4">
-                    <div class="team-player">
-                        <div class="card card-plain">
-                            <div class="col-md-6 ml-auto mr-auto">
-                                <img src="./images/profile/father.png" alt=""
-                                    class="img-raised rounded-circle img-fluid">
-                            </div>
-                            <h4 class="card-title">Flatlanders Father
-                                <br>
-                                <small class="card-description text-muted">Fuerza Bruta</small>
-                            </h4>
-                            <div class="card-body">
-                                <p class="card-description">
-                                    Soy el encargado de ir a la mina a obtener las mejores gemas
-                                    siempre me sorprendo de mi mismo trayendo lo mejor.
-                                </p>
-                            </div>
-                            <div class="card-footer justify-content-center">
-                                <a href="#father" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                <a href="#father" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                <a href="#father" class="btn btn-link btn-just-icon"><i
-                                        class="fa fa-facebook-square"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-    <!--Son-->
-                <div class="col-md-4">
-                    <div class="team-player">
-                        <div class="card card-plain">
-                            <div class="col-md-6 ml-auto mr-auto">
-                                <img src="./images/profile/kid.png" alt="" class="img-raised rounded-circle img-fluid">
-                            </div>
-                            <h4 class="card-title">Flatlanders Son
-                                <br>
-                                <small class="card-description text-muted">Inteligencia y publicidad</small>
-                            </h4>
-                            <div class="card-body">
-                                <p class="card-description">
-                                    Soy el encargado de mejorar constantemente el aspecto visual de nuestra tienda y
-                                    crear las mejores publicidades para nuestros productos.
-                                </p>
-                            </div>
-                            <div class="card-footer justify-content-center">
-                                <a href="#son" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                <a href="#son" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                <a href="#son" class="btn btn-link btn-just-icon"><i
-                                        class="fa fa-facebook-square"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-    <!--Mom-->                
-                <div class="col-md-4">
-                    <div class="team-player">
-                        <div class="card card-plain">
-                            <div class="col-md-6 ml-auto mr-auto">
-                                <img src="./images/profile/mom-baby.png" alt="" class="img-raised rounded-circle img-fluid">
-                            </div> 
-                            <h4 class="card-title">Flatlanders Mom
-                                <br>
-                                <small class="card-description text-muted">Diseñadora y gerente de tienda</small>
-                            </h4>
-                            <div class="card-body">
-                                <p class="card-description">
-                                    Yo me encargo de los diseños de la tienda, siempre pongo mi corazón en los productos
-                                    para que transmitan el sentimiento adecuado en cada una de las gemas que compran con
-                                    nosotros.
-                                </p>
-                            </div>
-                            <div class="card-footer justify-content-center">
-                                <a href="#father" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                <a href="#father" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                <a href="#father" class="btn btn-link btn-just-icon"><i
-                                        class="fa fa-facebook-square"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--Form-->
-    <div class="section section-contacts">
-        <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
-                <h2 class="text-center title">¿Tienes alguna duda?</h2>
-                <h4 class="text-center description">Cualquier duda de nuestros productos sientete libre de enviarnos un
-                    mensaje</h4>
-                <form action="" class="contact-form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="bmd-label-floating">Tu Nombre</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="bmd-label-floating">Tu Correo Electronico</label>
-                                <input type="email" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="bmd-label-floating">Danos amor en tu mensaje</label>
-                        <textarea class="form-control" name="" id="message" rows="4"></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 ml-auto mr-auto text-center">
-                            <button class="btn btn-rose btn-raised">
-                                <i class="material-icons">favorite</i>Envianos amor
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-<!--Footer-->
-    <footer class="footer footer-default">
-        <div class="container">
-            <nav class="float-right">
-                <ul>
-                    <li><a href="https://flatlanders-store.com/">Inicio</a></li>
-                    <li><a href="https://flatlanders-store.com/presentation">Acerca de Nosotros</a></li>
-                    <li><a href="https://flatlanders-store.com/blog">Blog</a></li>
-                    <li><a href="https://flatlanders-store.com/licence">Licencias</a></li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
+    <!--Directives of AngularJS-->
+    <script src="./JS/directives/navbar.js"></script>
+    <script src="./JS/directives/footer.js"></script>
 
 <!--Implementación de los scripts-->
-    <script src="./JS/jquery.min.js"></script>
-    <script src="./JS/popper.min.js"></script>
-    <script src="./JS/bootstrap-material-design.min.js"></script>
-    <script src="./JS/moment.min.js"></script>
-    <script src="./JS/bootstrap-datetimepicker.js"></script>
-    <script src="./JS/nouislider.min.js"></script>
-    <script src="./JS/material-kit.js"></script>
+    <script src="./JS/init/jquery.min.js"></script>
+    <script src="./JS/init/popper.min.js"></script>
+    <script src="./JS/init/bootstrap-material-design.min.js"></script>
+    <script src="./JS/init/moment.min.js"></script>
+    <script src="./JS/init/bootstrap-datetimepicker.js"></script>
+    <script src="./JS/init/nouislider.min.js"></script>
+    <script src="./JS/init/material-kit.js"></script>
 </body>
 
 </html>
