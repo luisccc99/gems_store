@@ -1,5 +1,5 @@
 (function() {
-    let app = angular.module('fStore',['ui.router', 'ui.router.state.events', 'landing','navbar','footer','app','products']);
+    let app = angular.module('fStore',['ui.router', 'ui.router.state.events', 'landing','navbar','footer','app','products', 'product']);
 
     app.config(['$stateProvider','$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
 
@@ -21,6 +21,16 @@
                 'content':{
                     templateUrl: 'partials/products/products.html',
                     controller: 'Products'
+                }
+            }
+        })
+
+        .state('app.product',{
+            url: '/products/:_id',
+            views: {
+                'content':{
+                    templateUrl: 'partials/products/product.html',
+                    controller: 'Product'
                 }
             }
         })

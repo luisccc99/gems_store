@@ -12,7 +12,12 @@
 
         $http.get("./dummy/products.json").then(function (data) {
             store.products = data.data.gems;
-            
         })
+
+        store.go = function (_id) {
+            $state.go('app.product', {
+                _id: _id
+            });
+        }
     }])
 }());
