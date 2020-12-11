@@ -1,5 +1,5 @@
 (function() {
-    let app = angular.module('fStore',['ui.router', 'ui.router.state.events', 'landing','navbar','footer','products']);
+    let app = angular.module('fStore',['ui.router', 'ui.router.state.events', 'landing','navbar','footer','app','products']);
 
     app.config(['$stateProvider','$urlRouterProvider','$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
 
@@ -12,7 +12,7 @@
         .state('app',{
             url:'/app',
             abstract: true,
-            templateUrl: 'main-panel.html',
+            templateUrl: 'partials/main-panel.html',
             controller: 'App'
         })
         .state('app.products',{
