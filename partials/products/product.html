@@ -1,36 +1,16 @@
 <section class="mb-5" ng-controller="Product as prod">
-
     <div class="row">
         <div class="col-md-6 mb-4 md-md-0">
-            <div class="row product-gallery mx-1">
-                <div class="col-12 mb-0">
-                    <figure class="view overlay rounded z-depth-1 main-image">
-                        <a href="" data-size="710x823">
-                            <img ng-src="{{prod.detail.images[0]}}" class="img-fluid z-depth-1 img-raised rounded"
-                                alt="">
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-3" style="display: -webkit-box;">
-                            <div class="view overlay rounded z-depth-1 gallery-item"
-                                ng-repeat="img in prod.detail.images track by $index">
-                                <img class="img-fluid img-raised rounded" ng-src="{{img}}" alt="">
-                                <div class="mask rgba-white-slight"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <product-gallery></product-gallery>
         </div>
         <div class="col-md-6">
             <h3>{{prod.detail.name}}</h3>
             <p class="mb-2 text-muted text-uppercase small">Gems</p>
-            <ul class="lis-inline small">
-                <li class="list-inline-item m-0" ng-repeat="n in [] | range: prod.avgStars"><i class="fa fa-star text-rose"></i></li>
+            <ul class="list-inline small">
+                <li class="list-inline-item m-0" ng-repeat="n in [] | range: prod.avgStars"><i
+                        class="fa fa-star text-rose"></i></li>
             </ul>
-            <p><span class="me-1"><strong>{{prod.detail.price | currency }}</strong></span></p>
+            <p><span class="mr-1"><strong>{{prod.detail.price | currency }}</strong></span></p>
             <div class="table-responsive">
                 <table class="table-table-sm table-borderless mb-0">
                     <tbody>
@@ -76,40 +56,53 @@
                             <td>
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                                      Small
-                                      <span class="circle">
-                                        <span class="check"></span>
-                                      </span>
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1">
+                                        Small
+                                        <span class="circle">
+                                            <span class="check text-rose"></span>
+                                        </span>
                                     </label>
-                                  </div>
-                                  <div class="form-check">
+                                </div>
+                                <div class="form-check">
                                     <label class="form-check-label">
-                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                                      Medium
-                                      <span class="circle">
-                                        <span class="check"></span>
-                                      </span>
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1">
+                                        Medium
+                                        <span class="circle">
+                                            <span class="check"></span>
+                                        </span>
                                     </label>
-                                  </div>
-                                  <div class="form-check">
+                                </div>
+                                <div class="form-check">
                                     <label class="form-check-label">
-                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                                      Large
-                                      <span class="circle">
-                                        <span class="check"></span>
-                                      </span>
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="option1">
+                                        Large
+                                        <span class="circle">
+                                            <span class="check"></span>
+                                        </span>
                                     </label>
-                                  </div>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 <button class="btn btn-rose btn-md mr-1 mb-2">Buy Now</button>
                 <button class="btn btn-light btn-md mr-1 mb2">
-                    <i class="material-icons pr.2">add_shopping_cart</i>
+                    <i class="material-icons pr-2">add_shopping_cart</i>
                     Add to cart
                 </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <product-panels></product-panels>
+
+                <specs-tab></specs-tab>
+                <review-tab></review-tab>
+                <descript-tab></descript-tab>
             </div>
         </div>
     </div>
