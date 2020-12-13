@@ -1,7 +1,7 @@
 (function () {
 
     let app = angular.module('specstab', [])
-    app.directive("specstab", function () {
+    app.directive("specsTab", function () {
         return {
             restrict: 'E',
             temlateUrl: 'partials/specs-tab.html',
