@@ -5,7 +5,7 @@
     app.directive("reviewTab", function () {
         return {
             restrict: 'E',
-            temlateUrl: 'partials/review-tab.html',
+            templateUrl: 'partials/review-tab.html',
             controller: function(){
                 console.log("review tab")
             }

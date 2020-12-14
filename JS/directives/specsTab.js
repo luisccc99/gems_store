@@ -4,7 +4,7 @@
     app.directive("specsTab", function () {
         return {
             restrict: 'E',
-            temlateUrl: 'partials/specs-tab.html',
+            templateUrl: 'partials/specs-tab.html',
             controller: function(){
                 console.log("specs tab")
             }
