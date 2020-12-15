@@ -1,0 +1,7 @@
+<div ng-controller="Products as prods">
+    <ul>
+        <li ng-repeat="gem in prods.best" ng-click="prods.go(gem._id)">
+            {{gem.name}}
+        </li>
+    </ul>
+</div>
