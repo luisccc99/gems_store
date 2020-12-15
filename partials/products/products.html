@@ -1,8 +1,31 @@
+<form>
+    <div class="row">
+        <div class="col-lg-9 mx-auto">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="material-icons">search</i>
+                    </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Buscar gemas" ng-model="gemSearch">
+            </div>
+        </div>
+        <div class="col-lg-3 mx-auto">
+            <div class="form-group">
+                <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1" ng-model="selectedSort">
+                    <option value="" selected>Ordenar</option>
+                    <option value="price">Precio: de más bajo a más alto</option>
+                    <option value="-price">Precio: de más alto a más bajo</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
 <div class="row" ng-controller="Products as prods">
 
     <div class="col-lg-8 mx-auto">
         <ul class="list-group">
-            <li class="list-group-item" ng-repeat="p in prods.products" ng-click="prods.go(p._id)">
+            <li class="list-group-item" ng-repeat="p in prods.products | filter: gemSearch | orderBy: selectedSort" ng-click="prods.go(p._id)">
                 <div class="media align-items-lg-center flex-column flex-lg-row">
                     <div class="media-body order-2 order-lg-1">
                         <h3 class="mt-0 font-weight-bold mb-2">{{p.name}}</h3>
@@ -25,10 +48,10 @@
                             </ul>
                         </div>
                     </div>
-                    <img ng-src="{{p.images[0]}}" alt="gems placeholder"
-                width="200" class="ml-lg-5 order-1 order-lg-2 img-raised rounded img-fluid">
+                    <img ng-src="{{p.images[0]}}" alt="gems placeholder" width="200"
+                        class="ml-lg-5 order-1 order-lg-2 img-raised rounded img-fluid">
                 </div>
-                
+
             </li>
         </ul>
     </div>
