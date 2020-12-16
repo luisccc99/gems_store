@@ -8,7 +8,7 @@
             "price": 110.50,
             "canPurchase": true,
             "favorite":true,
-            "sales":10,
+            "sales":12,
             "sizes":["large", "medium", "small"],
             "specs": {
                 "faces": 14,

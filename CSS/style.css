@@ -1,0 +1,12 @@
+.wrapper-gems {
+    max-height: 500px;
+    display: flex;
+    overflow-x: auto;
+}
+
+
+.wrapper-gems .card {
+    min-width: 300px;
+    height: auto;
+    cursor: pointer;
+}
