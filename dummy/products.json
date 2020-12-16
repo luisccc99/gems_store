@@ -8,6 +8,7 @@
             "price": 110.50,
             "canPurchase": true,
             "favorite":true,
+            "sales":10,
             "sizes":["large", "medium", "small"],
             "specs": {
                 "faces": 14,
@@ -43,6 +44,7 @@
             "price": 22.90,
             "canPurchase": true,
             "favorite":true,
+            "sales":16,
             "sizes":["large", "medium", "small"],
             "specs": {
                 "faces": 12,
@@ -76,6 +78,7 @@
             "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
             "price": 1100,
             "favorite":false,
+            "sales":5,
             "long_description":"loremsdfsdfksjhbfs",
             "sizes":["large", "medium", "small"],
             "specs": {
@@ -106,6 +109,122 @@
                     "stars": 1,
                     "body": "Don't waste your rubles!",
                     "author": "nat@example.org",
+                    "createdOn": 1397490980837
+                }
+            ]
+        },
+        {
+            "_id":";afdh1asd4adg",
+            "name": "Emerald",
+            "description":"Emerald is a green gemstone that distinguishes it from the rest",
+            "price": 1500,
+            "favorite":true,
+            "sales":30,
+            "sizes":["large", "medium", "small"],
+            "specs": {
+                "faces": 6,
+                "color": "#009975",
+                "rarity": 2,
+                "shine": 70
+            },
+            "images": [
+                "images/gems/esmeralda-01.png",
+                "images/gems/esmeralda-02.png",
+                "images/gems/esmeralda-03.png"
+            ],
+            "reviews": [
+                {
+                    "stars": 1,
+                    "body": "This gem is WAY too expensive for its rarity value.",
+                    "author": "turtleguyy@example.org",
+                    "createdOn": 1397490980837
+                },
+                {
+                    "stars": 1,
+                    "body": "BBW: High Shine != High Quality.",
+                    "author": "LouisW407@example.org",
+                    "createdOn": 1397490980837
+                },
+                {
+                    "stars": 1,
+                    "body": "Don't waste your rubles!",
+                    "author": "nat@example.org",
+                    "createdOn": 1397490980837
+                }
+            ]
+        },
+        {
+            "_id":"fko42j4ñ5b",
+            "name": "Ruby",
+            "description":"Ruby is a mineral of class 04 (oxides), according to the Strunz classification. It is a reddish gem; if it is purple, it is called balaje. ... It is considered one of the four precious gems together with sapphire, emerald and diamond.",
+            "price": 2300,
+            "favorite":true,
+            "sales":25,
+            "sizes":["medium", "small"],
+            "specs": {
+                "faces": 2,
+                "color": "#9b111e",
+                "rarity": 4,
+                "shine": 70
+            },
+            "images": [
+                "images/gems/ruby-01.png",
+                "images/gems/ruby-02.png",
+                "images/gems/ruby-03.png"
+            ],
+            "reviews": [
+                {
+                    "stars": 1,
+                    "body": "This gem is WAY too expensive for its rarity value.",
+                    "author": "turtleguyy@example.org",
+                    "createdOn": 1397490980837
+                },
+                {
+                    "stars": 1,
+                    "body": "BBW: High Shine != High Quality.",
+                    "author": "LouisW407@example.org",
+                    "createdOn": 1397490980837
+                },
+                {
+                    "stars": 1,
+                    "body": "Don't waste your rubles!",
+                    "author": "nat@example.org",
+                    "createdOn": 1397490980837
+                }
+            ]
+        },
+        {
+            "_id":"ñh5v4kgivj5jui",
+            "name": "Sapphire",
+            "description": "Sapphire is a variety of the mineral corundum, with a characteristic blue color, although there are other less common colors, due to impurities of certain oxides (Cr (III) and Ti (III)).",
+            "long_description":"loremsdfsdfksjhbfs",
+            "price": 390,
+            "canPurchase": true,
+            "favorite":true,
+            "sales":28,
+            "sizes":["large", "medium", "small"],
+            "specs": {
+                "faces": 12,
+                "color": "#6576b4",
+                "rarity": 6,
+                "shine": 9
+            },
+            "images": [
+                "images/gems/zapphiro-01.png",
+                "images/gems/zapphiro-02.png",
+                "images/gems/zapphiro-03.png"
+            ],
+            "reviews": [
+                {
+                    "stars": 3,
+                    "body": "I think this gem was just OK, could honestly use more shine, IMO.",
+                    "author": "JimmyDean@example.org",
+                    "createdOn": 1397490980837
+                },
+                {
+                    "stars": 4,
+                    "body": "Any gem with 12 faces is for me!",
+                    "author": "gemsRock@example.org",
                     "createdOn": 1397490980837
                 }
             ]
