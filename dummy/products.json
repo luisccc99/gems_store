@@ -210,8 +210,9 @@
                 "shine": 9
             },
             "images": [
-                "images/gems/zapphiro-01.png",
                 "images/gems/zapphiro-02.png",
+                "images/gems/zapphiro-01.png",
+                
                 "images/gems/zapphiro-03.png"
             ],
             "reviews": [
